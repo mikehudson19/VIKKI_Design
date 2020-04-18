@@ -1,0 +1,370 @@
+/* PAGE RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL STYLINGS */
+
+$darkColor: rgb(80, 80, 80);
+$lightColor: rgb(238, 238, 238);
+
+body {
+  font-family: 'Abel', sans-serif;
+}
+
+a { 
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img { 
+  width: 100%;
+}
+
+
+/* UTILITY CLASSES */ 
+
+.u_container { 
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  overflow: hidden;
+}
+
+.u_l-heading {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.u_m-heading {
+  font-size: 2rem;
+}
+
+.u_s-heading {
+  font-size: 1.3rem;
+}
+
+.u_btn {
+  background: $darkColor;
+  border: 0.5px solid $lightColor;
+  padding: 0.5rem 5rem;
+  color: $lightColor;
+  font-size: 0.8rem;
+  margin: 1rem;
+}
+
+.u_btn:hover {
+  cursor: pointer;
+  color: $darkColor;
+  background: $lightColor;
+  border: 0.5px solid $darkColor;
+}
+
+.u_btn-light {
+  background: $lightColor;
+  border: 0.5px solid $darkColor;
+  padding: 0.5rem 0;
+  color: $darkColor;
+  font-size: 0.8rem;
+}
+
+.u_btn-light:hover {
+  cursor: pointer;
+  color: $lightColor;
+  background: $darkColor;
+  border: 0.5px solid $lightColor;
+}
+
+/* NAVBAR */ 
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar ul li {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.navbar ul li a {
+  color: white;
+  padding-bottom: 3.4rem;
+}
+
+.nav-black {
+  display: flex;
+  justify-content: space-between;
+  background: $lightColor;
+  a {
+    width: 12%;
+    height: 12%;
+    padding: 1.3rem 0 0 1.8rem;
+  }
+  ul li a {
+    color: black;
+    padding: 0 0.5rem;
+    &:hover {
+    color: black;
+    border-bottom: 1.4px solid black;
+    }
+  }
+}
+
+.navbar ul li a:hover {
+  padding-bottom: 0.3rem;
+  border-bottom: 1.4px solid white;
+}
+
+
+
+/* SHOWCASE */
+
+.showcase {
+  background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(230,230,230,0.3)), url(/images/vikki-showcase.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.showcase-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+  color: white;
+  img {
+    width:400px;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    text-decoration: overline underline;
+    padding-bottom: 1rem;
+    font-family: serif;
+    font-size: 5rem;
+  }
+  p {
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    text-transform: uppercase;
+  }
+}
+
+
+
+/* PRODUCTS INTRO */
+
+.products-intro {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    margin: 1.5rem 0 2rem 0;
+  }
+}
+
+
+.product-grid {
+  display: flex;
+  margin-bottom: 2.8rem;
+}
+
+.product {
+  text-align: center;
+  width: 19rem;
+  height: 25rem;
+  margin: 1rem 1rem;
+  img {
+    opacity: 0.8;
+    height: 330px;
+    &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }}}
+
+.products-intro a {
+  padding: 0.8rem 2.5rem;
+  text-align: center;
+  width: 17%;
+}
+
+/* ABOUT */
+
+.about {
+  text-align: center;
+}
+
+.about-content {
+  margin: 2rem 0;
+  p {
+    padding: 2rem;
+}}
+
+.products h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* PRODUCTS PAGE */
+
+.flex-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* PRODUCT DETAIL PAGE */
+
+.prod-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+
+.prod-images {
+  display: grid;
+  grid-template-rows: 4fr 2fr;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1rem;
+  img {
+    width:100%;
+    border: 1px solid $lightColor;
+    &:first-child {
+      height: 25rem;
+      grid-area: 1 / 1 / span 1 / span 4;
+    &:nth-child(n+2) {
+      height: 80%;
+  .form-container,
+  .form-element  {
+    margin: 0;
+}}}}}
+
+
+
+.form-element .prod input {
+  width: 50%;
+}
+
+.prod-content p {
+  margin: 1.2rem 0;
+}
+
+
+/* SIZING PAGE */
+
+.sizing {
+  text-align: center;
+  margin: 6rem 0;
+}
+
+/* CONTACT PAGE */
+
+.contact h1 {
+  text-align: center;
+}
+
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid black;
+  height: 450px;
+  padding-top: 1.2rem;
+  i {
+    color: black;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+}}
+
+
+.contact-social {
+  margin: 3rem;
+  a i {
+    font-size: 4rem;
+}}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+
+.form-element {
+  margin: 0.6rem;
+  input {
+    padding: 0.4rem;
+    margin-top: 0.8rem;
+  label {
+    padding-bottom: 2.5rem;
+  textarea, input {
+    border: 0.5px solid $darkColor;
+    width: 60%;
+}}}}
+
+
+
+/* FOOTER */
+
+#footer {
+  background: $darkColor;
+  color: white;
+}
+
+.grid-foot {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 1rem;
+  ul li a {
+    color: white;
+}}
+
+.fab {
+  font-size: 1.8rem;
+  color: white;
+  &:hover {
+    transform: scale(1.2);
+}}
+
+.copyrightbar {
+  display: flex;
+  justify-content: center;
+  background: $darkColor;
+  padding: 0.5rem 4rem;
+  font-size: 0.7rem;
+}
+
+.foot-item {
+  width: 14rem;
+  &:nth-child(2n) {
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 90%;
+      margin: 0.3rem 0;
+      padding: 0.4rem;
+    ul li a:hover {
+      color:black;
+}}}}
+
+.foot-item p, i, li {
+  margin: 0.5rem 0;
+}

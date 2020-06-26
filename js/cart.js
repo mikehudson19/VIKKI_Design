@@ -6,14 +6,14 @@ function addToCart () {
     const cartItem = document.createElement('div');
     cartItem.className = 'cart-item';
     cartItem.innerHTML = `
-    <img src="/images/product images/product-1.jpg" alt="">
-    <span>Item 1</span>
-    <span>R599</span>
+    <img src="${obj.image}" alt="">
+    <span class="name">${obj.name}</span>
+    <span>R${obj.price}</span>
     <div>
       <input type="number" name="" value="1" id="">
-      <button>Remove</button>
+      <button class="remove">Remove</button>
     </div>
-    <span>R599</span>
+    <span>R${obj.price}</span>
     </div>
     `
     const cart = document.querySelector('#cart-items');
@@ -32,3 +32,21 @@ function retrieveFromLocal () {
   }
   return cart;
 }
+
+function removeItem () {
+
+}
+
+document.addEventListener('click', (e) => {
+  if (e.target.className == 'remove') {
+    const cart = retrieveFromLocal();
+    const item = e.target.parentElement.parentElement;
+    cart.forEach((obj, index) => {
+      if (obj.name === item.querySelector('.name').innerText) {        
+        cart.splice(index, 1)
+      }
+    })
+    item.remove(); 
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }
+})

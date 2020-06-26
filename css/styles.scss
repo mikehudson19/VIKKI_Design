@@ -9,6 +9,7 @@
 /* GENERAL STYLINGS */
 
 $darkColor: rgb(80, 80, 80);
+$midColor: rgb(155, 155, 155);
 $lightColor: rgb(238, 238, 238);
 
 body {
@@ -387,16 +388,50 @@ img {
 
 /* CART PAGE */
 
-.cart-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  
-  img {
-    width: 125px;
+#cart-items {
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  i {
+    color: $midColor;
   }
 }
+
+// #cart-items > div {
+//   border: black 1px solid;
+// }
+
+.cart-header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 4rem;
+  justify-items: center;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  grid-auto-rows: 5rem;
+  justify-items: center;
+  
+  img {
+    width: 70px;
+  }
+}
+
+.cart-item > div:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
 
 /* FOOTER */
 

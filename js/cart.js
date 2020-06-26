@@ -8,18 +8,18 @@ function addToCart () {
     cartItem.innerHTML = `
     <img src="${obj.image}" alt="">
     <span class="name">${obj.name}</span>
-    <span>R${obj.price}</span>
+    <span class="price">R${obj.price}</span>
     <div>
-      <input type="number" name="" value="1" id="">
+      <input type="number" value="1" id="qty">
       <button class="remove">Remove</button>
     </div>
-    <span>R${obj.price}</span>
+    <span class="total">R${obj.price}</span>
     </div>
     `
     const cart = document.querySelector('#cart-items');
     cart.appendChild(cartItem);
   })
-  console.log(cart);
+  calculateTotal();
   
 }
 
@@ -33,11 +33,7 @@ function retrieveFromLocal () {
   return cart;
 }
 
-function removeItem () {
-
-}
-
-document.addEventListener('click', (e) => {
+function removeItem (e) {
   if (e.target.className == 'remove') {
     const cart = retrieveFromLocal();
     const item = e.target.parentElement.parentElement;
@@ -49,4 +45,30 @@ document.addEventListener('click', (e) => {
     item.remove(); 
     localStorage.setItem('cart', JSON.stringify(cart))
   }
+}
+
+document.addEventListener('click', (e) => {
+  removeItem(e);
 })
+
+function calculateTotal () {
+  const cartItems = document.querySelectorAll('.cart-item');
+  let total = 0;
+  cartItems.forEach((obj) => {
+
+    const price = obj.querySelector('.price').innerText.slice(1);
+    const qty = obj.querySelector('#qty').value;
+    let itemTotal = obj.querySelector('.total');
+
+  
+  itemTotal.innerText = `R ${price* qty}`;    
+  
+  total += price*qty;
+})
+
+const cartTotal = document.querySelector('.total-price');
+cartTotal.innerText = `R ${total}`;
+
+  
+}
+

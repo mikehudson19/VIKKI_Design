@@ -79,8 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (obj.querySelector('input').value == 0) {
         alert('You cannot select zero items');
         obj.querySelector('input').value = 1;
+        
       } else {
         calculateTotal();
+        const cart = retrieveFromLocal();
+        cart.forEach((item) => {
+          if (item.name == obj.querySelector('.name').innerText) {
+            item.quantity = obj.querySelector('input').value;
+          }
+          localStorage.setItem('cart', JSON.stringify(cart));
+          
+        })
+        
       }
     })
   })

@@ -38,17 +38,17 @@
           <img src="/images/product images/product-1.jpg">
         </div>
         <div class="prod-content">
-          <h2 class="u_m-heading">Jewellery Item 1</h2>
+          <h2 class="u_m-heading" id="name">Jewellery Item 1</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo maiores quos ipsum libero voluptatum ullam id dolorum deleniti impedit ipsam odit inventore obcaecati alias, ad officia vero sunt dicta earum eum? Quae modi sapiente in!</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis cupiditate repellat, illum asperiores et eaque esse voluptate recusandae accusantium esse voluptate recusandae accusantium sunt?</p>
-          <p id="price">R799.00 (incl. VAT)</p>
+          <span id="price">R800</span><span> (incl. VAT)</span>
           <form class="form-container">
            <div class="form-element prod">
-            <label for="countries">Quantity:</label><br>
-            <input id="countries" name="form" type="number" placeholder="1" step="1" min="1" max="100">
+            <label for="qty">Quantity:</label><br>
+            <input id="qty" name="form" type="number" value="1" step="1" min="1" max="100">
            </div>
            <div class="form-element prod">
-            <input type="submit" value="Add To Cart" class="u_btn">
+            <input type="submit" value="Add To Cart" class="u_btn" id="cartAdd">
           </div>
           <a href="/products.html" class="u_btn">Back to Products</a>
           </form>

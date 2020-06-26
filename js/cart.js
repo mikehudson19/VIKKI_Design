@@ -10,7 +10,7 @@ function addToCart () {
     <span class="name">${obj.name}</span>
     <span class="price">R${obj.price}</span>
     <div>
-      <input type="number" value="1" id="qty">
+      <input type="number" value="${obj.quantity}" id="qty">
       <button class="remove">Remove</button>
     </div>
     <span class="total">R${obj.price}</span>

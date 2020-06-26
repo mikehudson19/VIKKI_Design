@@ -1,8 +1,9 @@
 class Item {
-  constructor(image, name, price) {
+  constructor(image, name, price, quantity) {
     this.image = image,
     this.name = name,
-    this.price = price
+    this.price = price,
+    this.quantity = quantity
   }
 }
 
@@ -12,8 +13,10 @@ cartAddBtn.addEventListener('click', (e) => {
   const image = document.querySelector('.prod-images').firstElementChild.getAttribute('src');
   const name = document.querySelector('#name').innerText;
   const price = document.querySelector('#price').innerText.slice(1);
+  const quantity = document.querySelector('#qty').value;
   
-  const item = new Item(image, name, price);
+  
+  const item = new Item(image, name, price, quantity);
   console.log(item);
   persistToLocal(item);
   e.preventDefault();
@@ -36,30 +39,5 @@ function retrieveFromLocal () {
     cart = JSON.parse(localStorage.getItem('cart'));
   }
   return cart;
-}
-
-document.addEventListener('DOMContentLoaded', addToCart);
-
-function addToCart () {
-  const cart = retrieveFromLocal();
-  cart.forEach((obj) => {
-    const cartItem = document.createElement('div');
-    cartItem.className = 'cart-item';
-    cartItem.innerHTML = `
-    <img src="/images/product images/product-1.jpg" alt="">
-    <span>Item 1</span>
-    <span>R599</span>
-    <div>
-      <input type="number" name="" value="1" id="">
-      <button>Remove</button>
-    </div>
-    <span>R599</span>
-    </div>
-    `
-    const cart = document.querySelector('.cart-items');
-    cart.appendChild(cartItem);
-  })
-  console.log(cart);
-  
 }
 

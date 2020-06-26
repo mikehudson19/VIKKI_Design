@@ -83,6 +83,58 @@ img {
   border: 0.5px solid $lightColor;
 }
 
+/* ALERT */ 
+
+.alert {
+  position: fixed;
+  top: 5rem;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.success {
+  background: green;
+  p {
+    color: white;
+  }
+}
+
+.failure {
+  background: red;
+  p {
+    color: white;
+  }
+}
+
+/* DIALOGUE */ 
+
+.dialogue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 15rem;
+  left: 32rem;
+  z-index: 1;
+  padding: 2rem;
+  background: $darkColor;
+  color: $lightColor;
+  width: 20rem;
+  p {
+    padding: 1.5rem;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 20rem;
+    button {
+      padding: 0.7rem;
+    }
+  }
+  
+}
+
 /* NAVBAR */ 
 
 .navbar ul {

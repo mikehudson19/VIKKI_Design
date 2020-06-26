@@ -19,6 +19,7 @@ cartAddBtn.addEventListener('click', (e) => {
   const item = new Item(image, name, price, quantity);
   console.log(item);
   persistToLocal(item);
+  createDialogue('Item added to cart!')
   e.preventDefault();
 
 })
@@ -41,3 +42,19 @@ function retrieveFromLocal () {
   return cart;
 }
 
+
+function createDialogue(message, result) {
+  const alert = document.createElement('div')
+  alert.innerHTML = `<p>${message}</p>
+  <div>
+  <button><a href="/cart.html">Go to cart</a></button><button>Continue Shopping</button>
+  </div> `
+  alert.className = `dialogue`
+  document.body.appendChild(alert);
+  alert.addEventListener('click', (e) => {
+    if (e.target.innerText == 'Continue Shopping') {
+      alert.remove();
+    }
+  })
+
+}

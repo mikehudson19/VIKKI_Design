@@ -45,6 +45,7 @@ function removeItem (e) {
     item.remove(); 
     localStorage.setItem('cart', JSON.stringify(cart))
     calculateTotal();
+    createAlert('Item removed from cart', 'failure');
   }
 }
 
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   qtyElements.forEach((obj) => {
     obj.querySelector('input').addEventListener('change', () => {
       if (obj.querySelector('input').value == 0) {
-        alert('You cannot select zero items');
+        createAlert('You cannot selecto zero items, asshole.', 'failure')
         obj.querySelector('input').value = 1;
         
       } else {
@@ -88,12 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
             item.quantity = obj.querySelector('input').value;
           }
           localStorage.setItem('cart', JSON.stringify(cart));
-          
         })
-        
       }
     })
   })
 });
 
+function createAlert(message, result) {
+  const alert = document.createElement('div')
+  alert.innerHTML = `<p>${message}</p>`
+  alert.className = `alert ${result}`
+  document.body.appendChild(alert);
+  setTimeout(() => {
+    alert.remove();
+  }, 2000)
+}
 

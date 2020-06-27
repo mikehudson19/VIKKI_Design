@@ -14,10 +14,10 @@ cartAddBtn.addEventListener('click', (e) => {
   const name = document.querySelector('#name').innerText;
   const price = document.querySelector('#price').innerText.slice(1);
   const quantity = document.querySelector('#qty').value;
-  
+
   
   const item = new Item(image, name, price, quantity);
-  console.log(item);
+
   persistToLocal(item);
   createDialogue('Item added to cart!')
   e.preventDefault();
@@ -44,17 +44,21 @@ function retrieveFromLocal () {
 
 
 function createDialogue(message, result) {
-  const alert = document.createElement('div')
-  alert.innerHTML = `<p>${message}</p>
+  const modal = document.createElement('div');
+  modal.className = 'bg-modal';
+  document.body.appendChild(modal)
+  modal.innerHTML = `
+  <div class='bg-content'>
+  <p>${message}</p>
   <div>
-  <button><a href="/cart.html">Go to cart</a></button><button>Continue Shopping</button>
+  <a href="/cart.html" class="u_btn-light">Go to cart</a><a href="#" class="u_btn-light">Continue Shopping</a>
+  </div>
   </div> `
-  alert.className = `dialogue`
-  document.body.appendChild(alert);
-  alert.addEventListener('click', (e) => {
+  modal.addEventListener('click', (e) => {
     if (e.target.innerText == 'Continue Shopping') {
-      alert.remove();
+      modal.remove();
     }
   })
+ 
 
 }

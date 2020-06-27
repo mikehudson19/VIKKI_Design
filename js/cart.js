@@ -11,9 +11,7 @@ function addToCart () {
       <span class="name">${obj.name}</span>
     </div>
     <span class="price">R${obj.price}</span>
-    <div>
-      <input type="number" value="${obj.quantity}" id="qty">
-    </div>
+    <input type="number" value="${obj.quantity}" id="qty">
     <span class="total">R${obj.price}</span>
     <span ><i class="fas fa-trash-alt remove"></i></span>
     `
@@ -70,7 +68,7 @@ function calculateTotal () {
 })
 
 const cartTotal = document.querySelector('.total-price');
-cartTotal.innerText = `R ${total}`;
+cartTotal.innerText = `Cart Total: R ${total}`;
 }
 
 

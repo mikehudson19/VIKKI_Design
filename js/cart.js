@@ -19,6 +19,7 @@ function addToCart () {
     cart.appendChild(cartItem);
   })
   calculateTotal();
+  cartNavQty();
   
 }
 
@@ -54,23 +55,28 @@ document.addEventListener('click', (e) => {
 
 function calculateTotal () {
   const cartItems = document.querySelectorAll('.cart-item');
+  
   let total = 0;
   cartItems.forEach((obj) => {
 
     const price = obj.querySelector('.price').innerText.slice(1);
     const qty = obj.querySelector('#qty').value;
     let itemTotal = obj.querySelector('.total');
-
+    const totalItemTotal = numberWithCommas(price*qty)
   
-  itemTotal.innerText = `R ${price* qty}`;    
+    itemTotal.innerText = `R ${totalItemTotal}`;    
   
   total += price*qty;
 })
-
+const newTotal = numberWithCommas(total)
 const cartTotal = document.querySelector('.total-price');
-cartTotal.innerText = `Cart Total: R ${total}`;
+cartTotal.innerText = `Cart Total: R ${newTotal}`;
+cartNavQty();
 }
 
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const qtyElements = document.querySelectorAll('.cart-item');
@@ -104,3 +110,14 @@ function createAlert(message, result) {
   }, 2000)
 }
 
+function cartNavQty () {
+  const cartQty = document.querySelector('.cart-qty');
+  const cartItems = document.querySelectorAll('.cart-item');
+  if (cartItems.length === 0) { 
+    cartQty.innerText = ' ';
+  } else {
+    
+    cartQty.innerText = cartItems.length;
+  }
+  
+}

@@ -168,6 +168,7 @@ img {
 
 .nav-light .fas {
   color: white;
+  margin: 0;
 }
 
 .nav-black {
@@ -201,9 +202,22 @@ img {
   border-bottom: 1.4px solid white;
 }
 
-.navbar .fas {
+.nav-dark .fas {
   margin: 0;
   color: #505050;
+}
+
+.navbar li:nth-child(6n) {
+  font-size: 1.05rem;
+  margin-top: 0.7rem;
+}
+
+.navbar li:nth-child(6n) a {
+  padding: 0.3rem;
+}
+
+.navbar li:nth-child(6n) span {
+  padding-right: 4px;
 }
 
 /* SHOWCASE */

@@ -156,6 +156,7 @@ img {
   }
   .fas {
     color: white;
+    margin: 0;
   }
 }
 
@@ -183,9 +184,20 @@ img {
   border-bottom: 1.4px solid white;
 }
 
-.navbar .fas {
+.nav-dark .fas {
   margin: 0;
   color: $darkColor;
+}
+
+.navbar li:nth-child(6n) {
+  font-size: 1.05rem;
+  margin-top: 0.7rem;
+  a {
+    padding: 0.3rem;
+  }
+  span {
+    padding-right: 4px;
+  }
 }
 
 
@@ -237,7 +249,6 @@ img {
     margin: 1.5rem 0 2rem 0;
   }
 }
-
 
 .product-grid {
   display: flex;
@@ -309,7 +320,6 @@ img {
       grid-area: 1 / 1 / span 1 / span 4;
     &:nth-child(n+2) {
       height: 80%;
-  
 }}}}
 
 .form-container .u_btn {

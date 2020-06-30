@@ -162,9 +162,12 @@ img {
   font-size: 1.2rem;
 }
 
-.navbar ul li a {
+.nav-light ul li a {
   color: white;
-  padding-bottom: 3.4rem;
+}
+
+.nav-light .fas {
+  color: white;
 }
 
 .nav-black {
@@ -198,7 +201,7 @@ img {
   border-bottom: 1.4px solid white;
 }
 
-.navbar i {
+.navbar .fas {
   margin: 0;
   color: #505050;
 }
@@ -660,7 +663,7 @@ img {
 }
 
 .bg-modal {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(219, 219, 219, 0.8);
   position: absolute;
   top: 0;
   width: 100%;
@@ -689,7 +692,7 @@ img {
           align-items: center;
   position: relative;
   padding: 2rem;
-  background: #9b9b9b;
+  background: #505050;
   color: #eeeeee;
   width: 20rem;
 }

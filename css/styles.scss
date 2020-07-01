@@ -140,6 +140,10 @@ img {
 
 /* NAVBAR */ 
 
+.ham-navbar {
+  display: none;
+}
+
 .navbar ul {
   display: flex;
   justify-content: flex-end;
@@ -184,7 +188,7 @@ img {
   border-bottom: 1.4px solid white;
 }
 
-.nav-dark .fas {
+.nav-black .fas {
   margin: 0;
   color: $darkColor;
 }
@@ -397,6 +401,7 @@ img {
   input {
     padding: 0.4rem;
     margin-top: 0.8rem;
+    width: 60%;
   label {
     padding-bottom: 2.5rem;
   textarea, input {

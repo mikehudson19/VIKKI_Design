@@ -19,3 +19,17 @@ function cartNavQty () {
 }
 
 document.addEventListener('DOMContentLoaded', cartNavQty)
+
+const hamburger = document.querySelector('.fa-bars');
+const navMenu = document.querySelector('.navbar');
+const hamNav = document.querySelector('.ham-nav-contain')
+
+document.addEventListener('click', (e) => {
+  if (e.target.className.includes('fas')) {
+    hamNav.style.display = 'flex';
+    hamburger.style.display = 'none';
+  } else if (e.target.className.includes('close')) {
+    hamNav.style.display = 'none';
+    hamburger.style.display = 'flex';
+  }
+})

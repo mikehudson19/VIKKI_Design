@@ -19,17 +19,26 @@ cartAddBtn.addEventListener('click', (e) => {
   const item = new Item(image, name, price, quantity);
 
   persistToLocal(item);
-  createDialogue('Item added to cart!')
+  
+  cartNavQty();
   e.preventDefault();
 
 })
 
-
-
 function persistToLocal (item) {
   const cart = retrieveFromLocal();
+  const cartArray = cart.filter((obj) => {
+    if (obj.name == item.name) {
+      return obj.name;
+    } 
+  })
+if (cartArray.length) {
+  createAlert('You have already added this item to your cart.', 'failure');
+} else {
   cart.push(item);
   localStorage.setItem('cart', JSON.stringify(cart))
+  createDialogue('Item added to cart!')
+}
 }
 
 function retrieveFromLocal () {
@@ -43,7 +52,7 @@ function retrieveFromLocal () {
 }
 
 
-function createDialogue(message, result) {
+function createDialogue(message) {
   const modal = document.createElement('div');
   modal.className = 'bg-modal';
   document.body.appendChild(modal)
@@ -59,6 +68,27 @@ function createDialogue(message, result) {
       modal.remove();
     }
   })
- 
-
 }
+
+function createAlert(message, result) {
+  const alert = document.createElement('div')
+  alert.innerHTML = `<p>${message}</p>`
+  alert.className = `alert ${result}`
+  document.body.appendChild(alert);
+  setTimeout(() => {
+    alert.remove();
+  }, 2000)
+}
+
+
+function cartNavQty () {
+  const cartQty = document.querySelector('.cart-qty');
+  const cartItems = retrieveFromLocal();
+  if (cartItems.length === 0) { 
+    cartQty.innerText = ' ';
+  } else { 
+    cartQty.innerText = cartItems.length;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', cartNavQty)

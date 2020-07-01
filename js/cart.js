@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', addToCart);
 function addToCart () {
   const cart = retrieveFromLocal();
   cart.forEach((obj) => {
+    console.log(obj.name)
     const cartItem = document.createElement('div');
     cartItem.className = 'cart-item';
     cartItem.innerHTML = `

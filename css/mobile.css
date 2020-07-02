@@ -26,7 +26,7 @@
 
 @media only screen and (max-width: 414px) {
 
-  .ham-nav-contain {
+  .ham-nav-container {
     background: rgba(231, 231, 231, 0.801);
     display: none;
     align-items: center;
@@ -36,6 +36,7 @@
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: 1;
   }
   
   .ham-navbar {
@@ -50,15 +51,23 @@
     text-align: center;
   }
 
-  .ham {
+  .hamburger {
+    display: block;
     position: absolute;
     top: 1rem;
     right: 1.6rem;
-    color: white;
   }
 
   .navbar {
     display: none;
+  }
+
+  .fa-dark {
+    color: black;
+  }
+
+  .fa-light {
+    color: white;
   }
 
   .navbar ul {
@@ -69,6 +78,10 @@
   .nav-black {
     flex-direction: column;
     align-items: center;
+  }
+
+  .nav-black .fas {
+    color: black;
   }
 
   .nav-black a {

@@ -373,7 +373,7 @@ img {
   flex-direction: column;
   align-items: center;
   border-right: 1px solid black;
-  height: 450px;
+  height: 400px;
   padding-top: 1.2rem;
   i {
     color: black;
@@ -734,6 +734,13 @@ img {
   label {
     padding-top: 0.5rem;
   }
+}
+
+.contact .form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
 

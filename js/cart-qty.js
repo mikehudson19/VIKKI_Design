@@ -16,7 +16,7 @@ function cartNavQty () {
     cartQty.innerText = ' ';
   } else { 
     cartQty.innerText = cartItems.length;
-    // hamCartQty.innerText = cartItems.length;
+    hamCartQty.innerText = cartItems.length;
   }
 }
 

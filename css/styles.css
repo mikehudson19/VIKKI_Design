@@ -444,7 +444,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   border-right: 1px solid black;
-  height: 450px;
+  height: 400px;
   padding-top: 1.2rem;
 }
 
@@ -931,6 +931,17 @@ img {
   }
   .form-container label {
     padding-top: 0.5rem;
+  }
+  .contact .form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    margin: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

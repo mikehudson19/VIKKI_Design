@@ -239,8 +239,8 @@ img {
 
 /* SHOWCASE */
 .showcase {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(230, 230, 230, 0.3))), url(/images/vikki-showcase.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(230, 230, 230, 0.3)), url(/images/vikki-showcase.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(230, 230, 230, 0.3))), url(/images/vikki-showcase-small.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(230, 230, 230, 0.3)), url(/images/vikki-showcase-small.jpg);
   background-size: cover;
   background-position: center;
   min-height: 100vh;

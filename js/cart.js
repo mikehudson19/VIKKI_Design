@@ -3,14 +3,13 @@ document.addEventListener('DOMContentLoaded', addToCart);
 function addToCart () {
   const cart = retrieveFromLocal();
   cart.forEach((obj) => {
-    console.log(obj.name)
     const cartItem = document.createElement('div');
     cartItem.className = 'cart-item';
     cartItem.innerHTML = `
-    <div>
+    
       <img src="${obj.image}" alt=""> 
       <span class="name">${obj.name}</span>
-    </div>
+ 
     <span class="price">R${obj.price}</span>
     <input type="number" value="${obj.quantity}" id="qty">
     <span class="total">R${obj.price}</span>

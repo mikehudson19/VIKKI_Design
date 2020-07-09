@@ -149,7 +149,9 @@ img {
 
 /* NAVBAR */
 .ham-navbar {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .navbar ul {
@@ -226,6 +228,12 @@ img {
 
 .navbar li:nth-child(6n) span {
   padding-right: 4px;
+}
+
+.ham-nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* SHOWCASE */
@@ -498,6 +506,13 @@ img {
       grid-template-columns: 2;
 }
 
+.cart-section h1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  padding-top: 1rem;
+}
+
 .cart-section > div:last-child {
   -ms-grid-column: 2;
   grid-column: 2;
@@ -545,8 +560,8 @@ img {
 .cart-item {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -763,8 +778,26 @@ img {
 }
 
 @media only screen and (max-width: 414px) {
+  .u_l-heading {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
   .cart-section {
-    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 3rem;
+  }
+  .cart-section h1 {
+    border-bottom: #9b9b9b 0.7px dotted;
+    width: 65%;
+    margin: 0 auto;
+    padding-bottom: 10px;
   }
   .cart-section .cart-header {
     display: none;
@@ -833,6 +866,25 @@ img {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / span 1;
+  }
+  .cart-summary {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 80%;
+    border: #9b9b9b 1px dotted;
+    margin: 3rem auto;
+  }
+  .cart-summary h2 {
+    text-align: center;
+  }
+  .cart-summary span {
+    text-align: center;
+  }
+  .cart-summary a {
+    height: 70%;
+    font-size: 0.75rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

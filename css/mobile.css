@@ -28,7 +28,7 @@
 
   .ham-nav-container {
     background: rgba(231, 231, 231, 0.801);
-    display: none;
+    /* display: none; */
     align-items: center;
     justify-content: center;
     position: absolute;

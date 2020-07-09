@@ -16,7 +16,7 @@ function cartNavQty () {
     cartQty.innerText = ' ';
   } else { 
     cartQty.innerText = cartItems.length;
-    hamCartQty.innerText = cartItems.length;
+    // hamCartQty.innerText = cartItems.length;
   }
 }
 
@@ -27,15 +27,38 @@ document.addEventListener('DOMContentLoaded', cartNavQty)
 
 const hamburger = document.querySelector('.fa-bars');
 const navMenu = document.querySelector('.navbar');
-const hamNav = document.querySelector('.ham-nav-container');
+// const hamNav = document.querySelector('.ham-nav-container');
 
 document.addEventListener('click', (e) => {
   if (e.target.className.includes('fas')) {
-    hamNav.style.display = 'flex';
-    hamburger.style.display = 'none';
+    // hamNav.style.display = 'flex';
+    // hamburger.style.display = 'none';
+    createMenu();
     cartNavQty();
   } else if (e.target.className.includes('close')) {
-    hamNav.style.display = 'none';
-    hamburger.style.display = 'flex';
+    const hamNav = document.querySelector('.ham-nav-container');
+    hamNav.remove();
+    // hamburger.style.display = 'flex';
   }
 })
+
+function createMenu () {
+  const div = document.createElement('div');
+  div.className = 'ham-nav-container';
+  div.innerHTML = `
+  <nav class="ham-navbar nav-light">
+            <span class="close">+</span>
+            <ul>
+              <li><a href="/index.html">Home</a></li> 
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/products.html">Products</a></li>
+              <li><a href="/sizing.html">Sizing</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/cart.html"><span class="ham-cart-qty"></span><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+          </nav>
+  `
+const contentDiv = document.querySelector('showcase-content');
+const parent = document.querySelector('.u_container');
+parent.insertBefore(div, contentDiv);
+}

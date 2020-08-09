@@ -413,8 +413,21 @@ img {
   margin: 0.5rem 0;
 }
 
+.prod-content p {
+  margin: 0.81rem 0;
+}
+
+.prod-content label {
+  margin-top: 0.81rem;
+}
+
+.prod-content #qty {
+  margin: 0.81rem 0;
+}
+
 /* SIZING PAGE */
 .sizing {
+  height: 50vh;
   text-align: center;
   margin: 6rem 0;
 }
@@ -484,13 +497,10 @@ img {
   width: 60%;
 }
 
-.contact .form-element input label {
-  padding-bottom: 2.5rem;
-}
-
-.contact .form-element input label textarea, .contact .form-element input label input {
-  border: 0.5px solid #505050;
+#message {
+  border: 0.4px solid #9b9b9b;
   width: 60%;
+  margin-top: 0.8rem;
 }
 
 /* CART PAGE */
@@ -697,7 +707,7 @@ img {
 
 .bg-modal {
   background: rgba(219, 219, 219, 0.8);
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
@@ -772,7 +782,7 @@ img {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 620px) {
   .u_l-heading {
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -865,8 +875,9 @@ img {
   .cart-summary {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 30% 20% 50%;
+        grid-template-rows: 30% 20% 50%;
+    height: 13rem;
     width: 80%;
     border: #9b9b9b 1px dotted;
     margin: 3rem auto;
@@ -878,8 +889,10 @@ img {
     text-align: center;
   }
   .cart-summary a {
-    height: 70%;
     font-size: 0.75rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .prod-detail-grid {
     display: -ms-grid;

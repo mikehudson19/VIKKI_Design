@@ -22,23 +22,17 @@ function cartNavQty () {
 
 document.addEventListener('DOMContentLoaded', cartNavQty)
 
-
 // HAMBURGER MENU FUNCTIONALITY 
-
 const hamburger = document.querySelector('.fa-bars');
 const navMenu = document.querySelector('.navbar');
-// const hamNav = document.querySelector('.ham-nav-container');
 
 document.addEventListener('click', (e) => {
-  if (e.target.className.includes('fas')) {
-    // hamNav.style.display = 'flex';
-    // hamburger.style.display = 'none';
+  if (e.target.className.includes('fa-bars')) {
     createMenu();
     cartNavQty();
   } else if (e.target.className.includes('close')) {
     const hamNav = document.querySelector('.ham-nav-container');
     hamNav.remove();
-    // hamburger.style.display = 'flex';
   }
 })
 

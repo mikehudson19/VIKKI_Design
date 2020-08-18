@@ -1,111 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>VIKKI Design</title>
-  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="/css/all.css" class="css">
-  <link rel="stylesheet" href="/css/styles.css" class="css">
-  <link rel="stylesheet" href="/css/mobile.css">
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon(1).ico">
-</head>
-<body>
-<header>    
-  <nav class="navbar nav-black">
-    <a href="index.html"><img src="/images/logo-black.png"></a>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/products.html">Products</a></li>
-      <li><a href="./sizing.html">Sizing</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-      <li><a href="/cart.html"><span class="cart-qty"></span><i class="fas fa-shopping-cart"></i></a></li>
-    </ul>
-  </nav> 
-  <div class="hamburger">
-    <i class="fas fa-bars fa-dark"></i>
-  </div>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VIKKI Design</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/all.css" class="css" />
+    <link rel="stylesheet" href="/css/styles.css" class="css" />
+    <link rel="stylesheet" href="/css/mobile.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/images/favicon(1).ico"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar nav-black">
+        <a href="index.html"><img src="/images/logo-black.png" /></a>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="./sizing.html">Sizing</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li>
+            <a href="/cart.html"
+              ><span class="cart-qty"></span><i class="fas fa-shopping-cart"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburger">
+        <i class="fas fa-bars fa-dark"></i>
+      </div>
+    </header>
 
-<section class="contact">
-  <div class="u_container">
-    <h1 class="u_l-heading">Contact Us</h1>
-  </div>
-  <div class="contact-page">
-    <div class="map-container" id="map">
+    <section class="contact">
+      <div class="u_container">
+        <h1 class="u_l-heading">Contact Us</h1>
+      </div>
+      <div class="contact-page">
+        <div class="map-container" id="map"></div>
 
-    </div>
-   
-  <div class="contact-container">
-    <i class="fas fa-phone"></i><p>078 898 4673</p>
-    <i class="far fa-envelope"></i>
-    <p>victoria@vikkidesigns.co.za</p>
-    <div class="contact-social">
-      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="border"></div>
-  </div>
-  <form class="form-container">
-    <div class="form-element">
-      <label for="name" id="name">Name</label><br>
-      <input type="text" name="name" id="name">
-    </div>
-    <div class="form-element">
-      <label for="email" id="email">Email</label><br>
-      <input type="email" name="email" id="email">
-    </div>
-    <div class="form-element">
-      <label for="message">Message</label><br>
-      <textarea id="message" name="message" cols="41" rows="10"></textarea>
-    </div>
-    <div class="form-element">
-      <input type="submit" value="Submit" class="u_btn">
-    </div>
-    <div class="border"></div>
-
-  </form>
-</div>
-</section>
-
-
-<footer id="footer">
-    <div class="u_container">
-      <div class="grid-foot">
-        <div class="foot-item">
-          <h2 class="u_s-heading">Newsletter</h2>
-          <p>Receive updates on new products!</p>
-          <input for="email" type="email" placeholder="Email here..."><br>
-          <input type= "submit" value="Submit" class="u_btn">
+        <div class="contact-container">
+          <i class="fas fa-phone"></i>
+          <p>078 898 4673</p>
+          <i class="far fa-envelope"></i>
+          <p>victoria@vikkidesigns.co.za</p>
+          <div class="contact-social">
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://www.linkedin.com/" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+          <div class="border"></div>
         </div>
-        <div class="foot-item">
-          <h2 class="u_s-heading">Follow Us!</h2>
-          <div class="foot-item icons">
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <form
+          class="form-container"
+          data-netlify="true"
+          name="contact"
+          method="POST"
+        >
+          <div class="form-element">
+            <label for="name" id="name">Name</label><br />
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="form-element">
+            <label for="email" id="email">Email</label><br />
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-element">
+            <label for="message">Message</label><br />
+            <textarea
+              id="message"
+              name="message"
+              cols="41"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="form-element">
+            <input type="submit" value="Submit" class="u_btn" />
+          </div>
+          <div class="border"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="u_container">
+        <div class="grid-foot">
+          <div class="foot-item">
+            <h2 class="u_s-heading">Newsletter</h2>
+            <p>Receive updates on new products!</p>
+            <input for="email" type="email" placeholder="Email here..." /><br />
+            <input type="submit" value="Submit" class="u_btn" />
+          </div>
+          <div class="foot-item">
+            <h2 class="u_s-heading">Follow Us!</h2>
+            <div class="foot-item icons">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://www.linkedin.com/" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <div class="foot-item">
+            <h2 class="u_s-heading">Our Policies</h2>
+            <ul>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Payment</a></li>
+              <li><a href="#">Disclaimer</a></li>
+            </ul>
           </div>
         </div>
-        <div class="foot-item">
-         <h2 class="u_s-heading">Our Policies</h2>
-         <ul>
-           <li><a href="#">Returns</a></li>
-           <li><a href="#">Payment</a></li>
-           <li><a href="#">Disclaimer</a></li>
-         </ul>
+        <div class="copyrightbar">
+          <div class="foot-item">
+            Copyright &copy; VIKKI Designs. All Rights Reserved.
+          </div>
         </div>
       </div>
-      <div class="copyrightbar">
-        <div class="foot-item">Copyright &copy; VIKKI Designs. All Rights Reserved.</div>
-      </div>
-    </div>
-  </footer> 
-  <script type="text/javascript" src="/js/cart-qty.js"></script> 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCReJ58lUmYAyIVGQ2xZQUtHh2mopC7DHI&callback=initMap">
-  </script>
-
-</body> 
-</html> 
+    </footer>
+    <script type="text/javascript" src="/js/cart-qty.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCReJ58lUmYAyIVGQ2xZQUtHh2mopC7DHI&callback=initMap"></script>
+  </body>
+</html>

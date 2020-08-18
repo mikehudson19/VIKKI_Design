@@ -433,6 +433,7 @@ img {
     border: 0.4px solid $midColor;
     width: 85%;
     margin-top: 0.8rem;
+    padding: 0.5rem;
 }
 
 /* CART PAGE */
@@ -631,6 +632,40 @@ img {
   &:hover {
     transform: rotate(270deg);
     cursor: pointer;
+  }
+}
+
+.background {
+  background: rgba(219, 219, 219, 0.8);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  width: 35vw;
+  height: 35vh;
+  background: $darkColor;
+  color: $lightColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p {
+    font-size: 1.15rem;
+    padding: 0 1rem;
+  }
+  a {
+    padding-top: 2rem;
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

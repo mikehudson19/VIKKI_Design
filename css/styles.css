@@ -1058,5 +1058,38 @@ img {
   .prod-detail-grid {
     margin-top: 2.5rem;
   }
+  .message {
+    width: 65vw;
+    height: 35vh;
+    background: #505050;
+    color: #eeeeee;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    position: relative;
+    top: -8rem;
+  }
+  .message p {
+    font-size: 1.15rem;
+    padding: 0 1rem;
+  }
+  .message a {
+    padding-top: 2rem;
+    color: white;
+  }
+  .message a:hover {
+    text-decoration: underline;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

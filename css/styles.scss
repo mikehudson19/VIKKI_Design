@@ -824,4 +824,29 @@ img {
   margin-top: 2.5rem;
 }
 
+.message {
+  width: 65vw;
+  height: 35vh;
+  background: $darkColor;
+  color: $lightColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: -8rem;
+  p {
+    font-size: 1.15rem;
+    padding: 0 1rem;
+  }
+  a {
+    padding-top: 2rem;
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 }

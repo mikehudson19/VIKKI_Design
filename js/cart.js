@@ -39,7 +39,7 @@ function removeItem (e) {
     const item = e.target.parentElement.parentElement;
     cart.forEach((obj, index) => {
       if (obj.name === item.querySelector('.name').innerText) {        
-        cart.splice(index, 1)
+        cart.splice(index, 1);
       }
     })
     item.remove(); 

@@ -1,0 +1,104 @@
+.showcase {
+  display: none;
+  height: 60vh;
+  background: url("/images/vikki-showcase-small.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar__icon {
+  padding: 0.8rem;
+}
+
+.navbar__full {
+  display: none;
+}
+
+.footer {
+  background: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.8rem;
+}
+
+.footer__text {
+  color: white;
+  padding-bottom: 0.5rem;
+}
+
+.footer__input {
+  width: 38%;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+}
+
+.footer__btn {
+  width: 42%;
+  padding: 0.28rem;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.footer__link {
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.footer__icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.footer__copy {
+  text-align: center;
+  color: white;
+  padding-bottom: 0.5rem;
+  font-size: 0.7rem;
+}
+/*# sourceMappingURL=style.css.map */

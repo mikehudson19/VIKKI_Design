@@ -4,14 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/f97d0e5ba4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title>VIKKI Design | Home</title>
 </head>
 <body>
   
-<%- include('partials/navbar') %>
 
 
+<section class="showcase">
+  <%- include('partials/navbar') %>
+  <h1 class="showcase__heading">VIKKI Design</h1>
+  <p>Your life, your jewellery.</p>
+  <p>Chosen by you, made by VIKKI.</p>
+
+</section>
+
+<section class="bestsellers">
+  <h1>Our bestsellers</h1>
+  <div class="bestsellers__images">
+    <div class="bestsellers__card">
+      <img class="bestsellers__image" src="" alt="">
+      <p class="bestsellers__text">Jewellery Piece 1</p>
+    </div>
+    <div class="bestsellers__card">
+      <img class="bestsellers__image" src="" alt="">
+      <p class="bestsellers__text">Jewellery Piece 2</p>
+    </div>
+    <div class="bestsellers__card">
+      <img class="bestsellers__image" src="" alt="">
+      <p class="bestsellers__text">Jewellery Piece 2</p>
+    </div>
+    <div class="bestsellers__card">
+      <img class="bestsellers__image" src="" alt="">
+      <p class="bestsellers__text">Jewellery Piece 2</p>
+    </div>
+  </div>
+</section>
 
 <%- include('partials/footer') %>
 

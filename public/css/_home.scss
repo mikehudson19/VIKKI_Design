@@ -1,0 +1,56 @@
+.showcase {
+  height: 80vh;
+  background: url('/images/vikki-showcase-small.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+  }
+  &__logo {
+    width: 80%;
+    margin-bottom: 1.5rem;
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+}
+
+.bestsellers {
+  text-align: center;
+  &__heading {
+    text-transform: uppercase;
+    margin: 1rem 0;
+  }
+  &__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__image {
+    height: 180px;
+    width: 250px;
+    background: grey;
+  }
+  &__card {
+    margin: 0.8rem 0;
+  }
+  &__btn {
+    text-decoration: none;
+    font-family: 'Abel', sans-serif;
+    background: $lightColor;
+    padding: 0.8rem 0;
+    border: 1px solid black;
+    margin: 0.8rem 0;
+  }
+  &__link {
+    text-decoration: none;
+    color: $darkColor;
+    padding: 1rem 2rem;
+  }
+}

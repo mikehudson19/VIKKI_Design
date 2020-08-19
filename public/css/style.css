@@ -1,14 +1,93 @@
 .showcase {
-  display: none;
-  height: 60vh;
+  height: 80vh;
   background: url("/images/vikki-showcase-small.jpg");
   background-size: cover;
   background-position: center;
+  color: white;
+}
+
+.showcase__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+}
+
+.showcase__logo {
+  width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+.showcase__text {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.bestsellers {
+  text-align: center;
+}
+
+.bestsellers__heading {
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.bestsellers__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bestsellers__image {
+  height: 180px;
+  width: 250px;
+  background: grey;
+}
+
+.bestsellers__card {
+  margin: 0.8rem 0;
+}
+
+.bestsellers__btn {
+  text-decoration: none;
+  font-family: 'Abel', sans-serif;
+  background: #eeeeee;
+  padding: 0.8rem 0;
+  border: 1px solid black;
+  margin: 0.8rem 0;
+}
+
+.bestsellers__link {
+  text-decoration: none;
+  color: #505050;
+  padding: 1rem 2rem;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 0.35px;
 }
 
 .navbar__hamburger {
@@ -21,15 +100,73 @@
 }
 
 .navbar__icon {
-  padding: 0.8rem;
+  padding: 1rem;
+}
+
+.navbar__icon:hover {
+  cursor: pointer;
 }
 
 .navbar__full {
   display: none;
 }
 
+.modal__container {
+  background: rgba(216, 216, 216, 0.849);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+}
+
+.modal__menu {
+  background: rgba(87, 87, 87, 0.719);
+  width: 60vw;
+  height: 30vh;
+  position: relative;
+  margin: 10rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  color: #eeeeee;
+  font-size: 1.5rem;
+}
+
+.modal__close:hover {
+  cursor: pointer;
+}
+
+.modal__list {
+  text-align: center;
+  list-style: none;
+}
+
+.modal__item {
+  padding: 0.30rem 0;
+}
+
+.modal__link {
+  color: #eeeeee;
+  text-decoration: none;
+}
+
 .footer {
-  background: grey;
+  background: #505050;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,7 +192,7 @@
 
 .footer__text {
   color: white;
-  padding-bottom: 0.5rem;
+  padding: 0.8rem 0;
 }
 
 .footer__input {
@@ -67,6 +204,11 @@
 .footer__btn {
   width: 42%;
   padding: 0.28rem;
+}
+
+.footer__btn:hover {
+  background: #505050;
+  color: #eeeeee;
 }
 
 .footer__links {
